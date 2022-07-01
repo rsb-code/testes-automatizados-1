@@ -4,4 +4,8 @@ export class MathService {
   getSum = (x: number, y: number) => {
     return x + y;
   };
+
+  getSubtract = (x: number, y: number) => {
+    return x - y;
+  }
 }

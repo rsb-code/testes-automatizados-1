@@ -9,10 +9,10 @@ describe('Realizando caso de teste na classe SortService', () => {
 
   it ('O método getSort deveria me retornar ["a", "b", "c"], quando lhe for passado ["c", "a", "b"]', () => {
     // Arrange
-    const palavras = ["a", "b", "c"]
+    const palavras = ["c", "a", "b"]
     const removerDuplicados = false
     const ordenacao = TipoOrdenacao.Asc
-    const resultadoEsperado = ["c", "a", "b"]
+    const resultadoEsperado = ["a", "b", "c"]
 
     // Act
     const result = _service.getSort(palavras, removerDuplicados, ordenacao)
@@ -28,10 +28,7 @@ describe('Realizando caso de teste na classe SortService', () => {
     const ordenacao = undefined
 
     // Act
-    const result = _service.getSort(palavras, removerDuplicados, ordenacao)
-
     // Assert
-    expect(result).not.toThrowError()
-    expect(result).toStrictEqual(palavras)
+    expect(() => _service.getSort(palavras, removerDuplicados, ordenacao)).not.toThrowError()
   })
 })

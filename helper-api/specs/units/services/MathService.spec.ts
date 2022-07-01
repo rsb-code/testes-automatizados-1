@@ -20,4 +20,10 @@ describe('MathService', () => {
     
     expect(resultado).toBe(4)
   })
+
+  it ('O metodo getSubtract deveria me retornar 1, quando lhe fosse passado x=2 e y=1', () => {
+    const result = _service.getSubtract(2, 1)
+
+    expect(result).toBe(1)
+  })
 })
