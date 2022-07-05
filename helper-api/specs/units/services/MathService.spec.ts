@@ -26,4 +26,18 @@ describe('MathService', () => {
 
     expect(result).toBe(1)
   })
+
+  it.each([
+    [1, 1, 1],
+    [1, 2, 2],
+  ])('%i * %i = %i', (x, y, result) => {
+    expect(x * y).toBe(result)
+  })
+
+  it.each([
+      { x: 1, y: 3, result: 3 },
+      { x: 1, y: 4, result: 4 },
+    ])('$x * $y = $result', ({ x, y, result }) => {
+      expect(x * y).toBe(result)
+    })
 })
